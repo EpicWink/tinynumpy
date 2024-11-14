@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 61.0",
+]
+
+[project]
+name = "tinynumpy"
+version = "1.2.0"
+
+authors = [
+    { name = "Wade Brainerd", email = "wadetb@gmail.com" },
+    { name = "Almar Klein" },
+]
+classifiers = []
+description = "A lightweight, pure Python, numpy compliant ndarray class"
+keywords = ["Science", "Research", "Engineering", "Software Development"]
+license = { text = "MIT" }
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/wadetb/tinynumpy"
+
+[tool.setuptools]
+include-package-data = false
+packages = { find = { namespaces = false, include = ["tinynumpy*"] } }
