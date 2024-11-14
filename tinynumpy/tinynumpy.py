@@ -46,7 +46,6 @@ import ctypes
 
 from math import sqrt
 from copy import copy, deepcopy
-from collections import Iterable
 import operator
 
 import tinynumpy.tinylinalg as linalg
@@ -55,6 +54,10 @@ from tinynumpy.tinylinalg import LinAlgError as LinAlgError
 # Python 2/3 compat
 if sys.version_info >= (3, ):
     xrange = range
+
+    from collections.abc import Iterable
+else:
+    from collections import Iterable
 
 # Define version numer
 __version__ = '0.0.1dev'
